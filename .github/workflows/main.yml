@@ -1,0 +1,17 @@
+name: Kittygram CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check_repository:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Получить код из репозитория
+        uses: actions/checkout@v4
+
+      - name: Проверка структуры проекта
+        run: echo "GitHub Actions настроен корректно!"
